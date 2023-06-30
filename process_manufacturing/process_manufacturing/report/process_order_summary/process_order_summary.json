@@ -1,0 +1,29 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2023-04-26 15:02:58.644052",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{}",
+ "modified": "2023-04-26 19:32:52.944519",
+ "modified_by": "Administrator",
+ "module": "Process Manufacturing",
+ "name": "Process Order Summary",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \n    CASE WHEN po.name = LAG(po.name) OVER (ORDER BY po.name) THEN NULL ELSE po.name END AS Process_ID, \n    CASE WHEN po.status = LAG(po.status) OVER (ORDER BY po.name) THEN NULL ELSE po.status END AS Status,\n    poi.item AS Item, \n    poi.quantity, \n    poi.amount AS Amount, \n    po.start_dt AS Start_Date, \n    po.end_dt AS End_Date,\n    CASE WHEN status_counts.`count` = LAG(status_counts.`count`) OVER (ORDER BY po.name) THEN 0 ELSE status_counts.`count` END AS Status_Count\nFROM `tabProcess Order` po \nINNER JOIN `tabProcess Order Item` poi ON po.name = poi.parent\nINNER JOIN (\n    SELECT `status`, COUNT(*) as `count`\n    FROM `tabProcess Order`\n    GROUP BY `status`\n) status_counts ON po.status = status_counts.`status`\nORDER BY po.name, poi.idx",
+ "ref_doctype": "Process Order",
+ "report_name": "Process Order Summary",
+ "report_script": "def execute(filters=None):\n\tcolumns, data = [], []\n\t# Add columns to the report\n\tcolumns = [\n\t\t{\"label\": \"Item Code\", \"fieldname\": \"item_code\", \"fieldtype\": \"Link\", \"options\": \"Item\"},\n\t\t{\"label\": \"Item Name\", \"fieldname\": \"item_name\", \"fieldtype\": \"Data\"},\n\t\t{\"label\": \"Status\", \"fieldname\": \"status\", \"fieldtype\": \"Data\"}\n\t]\n\t# Add filters to the report\n\tfilters = [\n\t\t[\"status\", \"=\", \"Completed\"]\n\t]\n\t# Execute the query\n\tdata = frappe.db.get_all(\"Item\", filters=filters, fields=[\"name as item_code\", \"item_name\", \"status\"])\n\treturn columns, data",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

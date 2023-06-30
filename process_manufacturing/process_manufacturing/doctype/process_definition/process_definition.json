@@ -1,0 +1,333 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:process_name",
+ "creation": "2023-01-04 14:24:10.948624",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "process_name",
+  "workstation",
+  "process_type",
+  "department",
+  "column_break_5",
+  "date",
+  "costing_method",
+  "value_scrap",
+  "warehouse_section",
+  "src_warehouse",
+  "wip_warehouse",
+  "column_break_gcnbb",
+  "fg_warehouse",
+  "scrap_warehouse",
+  "materials_section",
+  "materials",
+  "section_break_k9x0i",
+  "materials_qty",
+  "column_break_kwyzv",
+  "materials_amount",
+  "finished_products_section",
+  "finished_products",
+  "section_break_iabz5",
+  "finished_products_qty",
+  "column_break_qhjvb",
+  "finished_products_amount",
+  "scrap_section",
+  "scrap",
+  "section_break_zklxu",
+  "scrap_qty",
+  "column_break_mdkf0",
+  "scrap_amount",
+  "section_break_fkqzd",
+  "operation_cost",
+  "total_operation_cost",
+  "section_break_jz8l1",
+  "all_finish_qty",
+  "total_all_amount",
+  "column_break_33",
+  "diff_qty",
+  "diff_amt",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Process Definition Details"
+  },
+  {
+   "fieldname": "process_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Process Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department ( Warehouse )",
+   "options": "Manufacturing Department"
+  },
+  {
+   "fieldname": "process_type",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Process Type",
+   "options": "Process Type"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Workstation",
+   "options": "Workstation"
+  },
+  {
+   "default": "Physical measurement",
+   "fieldname": "costing_method",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Costing Method",
+   "options": "\nPhysical measurement\nRelative Sales Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "materials_section",
+   "fieldtype": "Section Break",
+   "label": "Raw Materials"
+  },
+  {
+   "fieldname": "materials",
+   "fieldtype": "Table",
+   "label": "Raw Materials ",
+   "options": "Process Item"
+  },
+  {
+   "fieldname": "finished_products_section",
+   "fieldtype": "Section Break",
+   "label": "Finished Products"
+  },
+  {
+   "fieldname": "finished_products",
+   "fieldtype": "Table",
+   "label": "Finished Products",
+   "options": "Process Item"
+  },
+  {
+   "fieldname": "scrap_section",
+   "fieldtype": "Section Break",
+   "label": "By-Products"
+  },
+  {
+   "fieldname": "scrap",
+   "fieldtype": "Table",
+   "label": "By-Products",
+   "options": "Process Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "value_scrap",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Include By-Product  in Valuation"
+  },
+  {
+   "fieldname": "section_break_jz8l1",
+   "fieldtype": "Section Break",
+   "label": "Total Calculation"
+  },
+  {
+   "fieldname": "operation_cost",
+   "fieldtype": "Table",
+   "label": "Additional Cost",
+   "options": "Landed Cost Taxes and Charges"
+  },
+  {
+   "fieldname": "materials_qty",
+   "fieldtype": "Float",
+   "label": "Total Raw Materials Quantity ( TON )"
+  },
+  {
+   "fieldname": "column_break_kwyzv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "materials_amount",
+   "fieldtype": "Currency",
+   "label": "Total Raw Materials Amount"
+  },
+  {
+   "fieldname": "finished_products_qty",
+   "fieldtype": "Float",
+   "label": "Total Finished Products Quantity ( TON )"
+  },
+  {
+   "fieldname": "column_break_qhjvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "finished_products_amount",
+   "fieldtype": "Currency",
+   "label": "Total Finished Products Amount"
+  },
+  {
+   "fieldname": "section_break_k9x0i",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_iabz5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_zklxu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "scrap_qty",
+   "fieldtype": "Float",
+   "label": "Total By-Products Quantity ( TON )"
+  },
+  {
+   "fieldname": "column_break_mdkf0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scrap_amount",
+   "fieldtype": "Currency",
+   "label": "Total By-Products Amount "
+  },
+  {
+   "default": "0",
+   "fieldname": "total_operation_cost",
+   "fieldtype": "Data",
+   "label": "Total Additional Cost"
+  },
+  {
+   "fieldname": "all_finish_qty",
+   "fieldtype": "Float",
+   "label": "Total Finish Qty (Output)"
+  },
+  {
+   "fieldname": "total_all_amount",
+   "fieldtype": "Currency",
+   "label": "Total amount (Output)"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Process Definition",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diff_qty",
+   "fieldtype": "Float",
+   "label": "Total Difference Quantity"
+  },
+  {
+   "fieldname": "diff_amt",
+   "fieldtype": "Currency",
+   "label": "Total Difference  Amount"
+  },
+  {
+   "fieldname": "section_break_fkqzd",
+   "fieldtype": "Section Break",
+   "label": "Additional Cost"
+  },
+  {
+   "fieldname": "warehouse_section",
+   "fieldtype": "Section Break",
+   "label": "Warehouse"
+  },
+  {
+   "fetch_from": "department.src_warehouse",
+   "fieldname": "src_warehouse",
+   "fieldtype": "Link",
+   "label": "Source Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fetch_from": "department.wip_warehouse",
+   "fieldname": "wip_warehouse",
+   "fieldtype": "Link",
+   "label": "Work-in-Progress Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_gcnbb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "department.fg_warehouse",
+   "fieldname": "fg_warehouse",
+   "fieldtype": "Link",
+   "label": "Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fetch_from": "department.scrap_warehouse",
+   "fieldname": "scrap_warehouse",
+   "fieldtype": "Link",
+   "label": "By-Product Warehouse",
+   "options": "Warehouse"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Process Order",
+   "link_fieldname": "process_name"
+  }
+ ],
+ "modified": "2023-05-25 14:10:19.142666",
+ "modified_by": "Administrator",
+ "module": "Process Manufacturing",
+ "name": "Process Definition",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

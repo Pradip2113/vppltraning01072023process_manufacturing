@@ -1,0 +1,128 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"NWMzaqU7r0\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"EYyLsy6AN-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Process Definition\",\"col\":3}},{\"id\":\"pOVB8ajTVJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Process Order\",\"col\":3}},{\"id\":\"HsuZaEtigY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Entry\",\"col\":3}},{\"id\":\"5mV-pb_MRr\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"EEQ3sMkrsu\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Process Manufacturing</b></span>\",\"col\":12}},{\"id\":\"HteItjAW32\",\"type\":\"card\",\"data\":{\"card_name\":\"Process\",\"col\":4}},{\"id\":\"2kPb87fv6o\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock\",\"col\":4}},{\"id\":\"oL8DEVqewo\",\"type\":\"card\",\"data\":{\"card_name\":\"Ledger\",\"col\":4}}]",
+ "creation": "2023-05-26 18:21:39.100608",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "image-view",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Process Manufacturing",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Process",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Process Definition",
+   "link_count": 0,
+   "link_to": "Process Definition",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Process Order",
+   "link_count": 0,
+   "link_to": "Process Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Entry",
+   "link_count": 0,
+   "link_to": "Stock Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Ledger",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Ledger",
+   "link_count": 0,
+   "link_to": "Stock Ledger",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Account Ledger",
+   "link_count": 0,
+   "link_to": "Account",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-06-01 16:10:47.942670",
+ "modified_by": "Administrator",
+ "module": "Process Manufacturing",
+ "name": "Process Manufacturing",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "Process Order",
+   "link_to": "Process Order",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "Stock Entry",
+   "link_to": "Stock Entry",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "Process Definition",
+   "link_to": "Process Definition",
+   "type": "DocType"
+  }
+ ],
+ "title": "Process Manufacturing"
+}
